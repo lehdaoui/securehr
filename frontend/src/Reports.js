@@ -11,7 +11,7 @@ function Reports() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/api/employees", {
+      .get("http://13.53.177.189:5001/api/employees", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

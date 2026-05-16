@@ -23,7 +23,7 @@ function Dashboard() {
 
   const fetchEmployees = async () => {
     try {
-      const res = await axios.get("http://localhost:5001/api/employees", {
+      const res = await axios.get("http://13.53.177.189:5001/api/employees", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -35,7 +35,7 @@ function Dashboard() {
 
   const fetchActivities = async () => {
     try {
-      const res = await axios.get("http://localhost:5001/api/activities", {
+      const res = await axios.get("http://13.53.177.189:5001/api/activities", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -73,7 +73,7 @@ function Dashboard() {
 
   const deleteEmployee = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/api/employees/${id}`, {
+      await axios.delete(`http://13.53.177.189:5001/api/employees/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -109,7 +109,7 @@ function Dashboard() {
 
     try {
       await axios.put(
-        `http://localhost:5001/api/employees/${editingEmployee}`,
+        `http://13.53.177.189:5001/api/employees/${editingEmployee}`,
         editForm,
         {
           headers: { Authorization: `Bearer ${token}` },

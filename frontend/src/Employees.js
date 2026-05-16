@@ -45,7 +45,7 @@ function Employees() {
     try {
 
       const response = await axios.post(
-        "http://localhost:5001/api/employees",
+        "http://13.53.177.189:5001/api/employees",
         form,
         {
           headers: {
