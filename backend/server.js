@@ -15,8 +15,15 @@ const logsRoutes = require("./routes/logs");
 const app = express();
 
 app.use(express.json());
-app.use(cors());
-app.use(helmet());
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
+
+app.use(helmet({
+  crossOriginResourcePolicy: false,
+}));
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
