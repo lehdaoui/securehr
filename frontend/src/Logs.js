@@ -18,7 +18,7 @@ function Logs() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5001/api/logs",
+        "http://13.53.177.189:5001/api/logs",
         {
           headers: {
             Authorization: `Bearer ${token}`,
